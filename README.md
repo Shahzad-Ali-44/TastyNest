@@ -45,10 +45,6 @@ npm run dev
 Visit [http://localhost:3000](http://localhost:3000) to see the app running.
 
 
-## 🌍 Live Demo
-
-[https://tasty-nest.vercel.app](https://tasty-nest.vercel.app) 
-
 ## 🙌 Acknowledgements
 
 - [DummyJSON Recipes API](https://dummyjson.com/docs/recipes)
