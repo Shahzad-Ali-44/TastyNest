@@ -2,7 +2,7 @@ import Link from "next/link";
 import Navbar from "../navbar";
 import Footer from "../footer";
 import Image from "next/image";
-
+import { ArrowLeft } from "lucide-react";
 export default function RecipeDetailsItem({ getRecipeDetails }) {
   return (
     <div className="flex flex-col min-h-screen">
@@ -12,9 +12,14 @@ export default function RecipeDetailsItem({ getRecipeDetails }) {
 
       <main className="flex-grow bg-white py-12 px-4">
         <div className="max-w-6xl mx-auto">
-          <Link href="/recipes" className="text-green-700 font-semibold hover:underline mb-6 inline-block">
-            ← Back to Recipe List
+          <Link href="/recipes" className="mb-6 inline-block group">
+            <span className="inline-flex items-center gap-1 border-b border-transparent group-hover:border-green-700">
+              <ArrowLeft className="w-4 h-4 text-green-700" />
+              <span className="text-green-700 font-semibold">Back to Recipe List</span>
+            </span>
           </Link>
+
+
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
