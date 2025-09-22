@@ -27,44 +27,44 @@ export default function RecipeDetailsItem({ getRecipeDetails }) {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
 
-      <main className="py-12">
+      <main className="py-12 content-visibility-auto">
         <div className="max-w-7xl mx-auto px-4">
           <Link href="/recipes" className="mb-8 inline-block group">
-            <span className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
+            <span className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 will-change-transform">
               <ArrowLeft className="w-4 h-4" />
               <span className="font-medium">Back to Recipes</span>
             </span>
           </Link>
 
-          <div className="mb-16">
-                <div className="relative overflow-hidden rounded-2xl shadow-xl mb-8 sm:mb-12 group">
+          <div className="mb-16 contain-layout">
+                <div className="relative overflow-hidden rounded-2xl shadow-lg mb-8 sm:mb-12 group will-change-transform transform-gpu">
                   <Image
                     src={getRecipeDetails?.image}
                     alt={getRecipeDetails?.name}
                     width={1000}
                     height={500}
-                    className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
                     priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-                  <div className="absolute top-3 right-3 sm:top-6 sm:right-6 bg-white/95 backdrop-blur-sm rounded-full px-2 py-1 sm:px-4 sm:py-2 flex items-center gap-1 sm:gap-2 text-sm sm:text-lg font-bold text-gray-700 shadow-lg">
+                  <div className="absolute top-3 right-3 sm:top-6 sm:right-6 bg-white/95 rounded-full px-2 py-1 sm:px-4 sm:py-2 flex items-center gap-1 sm:gap-2 text-sm sm:text-lg font-bold text-gray-700 shadow-lg will-change-transform transform-gpu contain-paint">
                     <Star className="w-3 h-3 sm:w-5 sm:h-5 text-yellow-500" />
                     {getRecipeDetails?.rating}
                   </div>
                   <div className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 drop-shadow-lg">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 drop-shadow-lg transform-gpu will-change-transform">
                       {getRecipeDetails?.name}
                     </h2>
                     <div className="flex flex-wrap gap-2 sm:gap-3">
-                      <div className="flex items-center gap-1 sm:gap-2 bg-white/90 backdrop-blur-sm text-gray-700 px-2 py-1 sm:px-4 sm:py-2 rounded-full font-medium text-xs sm:text-sm">
+                      <div className="flex items-center gap-1 sm:gap-2 bg-white/95 text-gray-700 px-2 py-1 sm:px-4 sm:py-2 rounded-full font-medium text-xs sm:text-sm will-change-transform transform-gpu contain-paint">
                         <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
                         <span>{getRecipeDetails?.prepTimeMinutes} min</span>
                       </div>
-                      <div className="flex items-center gap-1 sm:gap-2 bg-white/90 backdrop-blur-sm text-gray-700 px-2 py-1 sm:px-4 sm:py-2 rounded-full font-medium text-xs sm:text-sm">
+                      <div className="flex items-center gap-1 sm:gap-2 bg-white/95 text-gray-700 px-2 py-1 sm:px-4 sm:py-2 rounded-full font-medium text-xs sm:text-sm will-change-transform transform-gpu contain-paint">
                         <Users className="w-3 h-3 sm:w-4 sm:h-4" />
                         <span>{getRecipeDetails?.servings} servings</span>
                       </div>
-                      <div className="flex items-center gap-1 sm:gap-2 bg-white/90 backdrop-blur-sm text-gray-700 px-2 py-1 sm:px-4 sm:py-2 rounded-full font-medium text-xs sm:text-sm">
+                      <div className="flex items-center gap-1 sm:gap-2 bg-white/95 text-gray-700 px-2 py-1 sm:px-4 sm:py-2 rounded-full font-medium text-xs sm:text-sm will-change-transform transform-gpu contain-paint">
                         <span className="font-semibold">{getRecipeDetails?.cuisine}</span>
                       </div>
                     </div>
@@ -73,15 +73,15 @@ export default function RecipeDetailsItem({ getRecipeDetails }) {
 
             <div className="text-center">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-8 max-w-4xl mx-auto">
-                <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm text-center">
+                <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm text-center will-change-transform transform-gpu contain-paint">
                   <p className="text-xs sm:text-sm text-gray-600 mb-2 font-medium">Meal Type</p>
                   <p className="text-base sm:text-lg font-bold text-gray-900">{getRecipeDetails?.mealType?.[0]}</p>
                 </div>
-                <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm text-center">
+                <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm text-center will-change-transform transform-gpu contain-paint">
                   <p className="text-xs sm:text-sm text-gray-600 mb-2 font-medium">Cuisine</p>
                   <p className="text-base sm:text-lg font-bold text-gray-900">{getRecipeDetails?.cuisine}</p>
                 </div>
-                <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm text-center sm:col-span-2 lg:col-span-1">
+                <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm text-center sm:col-span-2 lg:col-span-1 will-change-transform transform-gpu contain-paint">
                   <p className="text-xs sm:text-sm text-gray-600 mb-2 font-medium">Difficulty</p>
                   <p className="text-base sm:text-lg font-bold text-gray-900">Easy</p>
                 </div>
@@ -89,8 +89,8 @@ export default function RecipeDetailsItem({ getRecipeDetails }) {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
-            <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl border border-gray-200 shadow-sm">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 contain-layout">
+            <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl border border-gray-200 shadow-sm will-change-transform transform-gpu contain-paint">
               <div className="flex items-center gap-3 mb-6 sm:mb-8">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-100 rounded-xl flex items-center justify-center">
                   <span className="text-xl sm:text-2xl">🥕</span>
@@ -99,7 +99,7 @@ export default function RecipeDetailsItem({ getRecipeDetails }) {
               </div>
               <div className="space-y-3 sm:space-y-4">
                 {getRecipeDetails?.ingredients?.map((item, index) => (
-                  <div key={index} className="flex items-center gap-3 sm:gap-4 bg-gray-50 p-3 sm:p-4 rounded-xl hover:bg-gray-100 transition-colors">
+                  <div key={index} className="flex items-center gap-3 sm:gap-4 bg-gray-50 p-3 sm:p-4 rounded-xl hover:bg-gray-100 transition-colors duration-200 will-change-transform">
                     <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full flex-shrink-0"></div>
                     <span className="text-gray-700 font-medium text-base sm:text-lg">{item}</span>
                   </div>
@@ -108,7 +108,7 @@ export default function RecipeDetailsItem({ getRecipeDetails }) {
             </div>
 
             {getRecipeDetails?.instructions && (
-              <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl border border-gray-200 shadow-sm">
+              <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl border border-gray-200 shadow-sm will-change-transform transform-gpu contain-paint">
                 <div className="flex items-center gap-3 mb-6 sm:mb-8">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-xl flex items-center justify-center">
                     <span className="text-xl sm:text-2xl">👨‍🍳</span>
@@ -117,7 +117,7 @@ export default function RecipeDetailsItem({ getRecipeDetails }) {
                 </div>
                 <div className="space-y-4 sm:space-y-6">
                   {getRecipeDetails.instructions.map((instruction, index) => (
-                    <div key={index} className="flex gap-4 sm:gap-6 bg-gray-50 p-4 sm:p-6 rounded-xl hover:bg-gray-100 transition-colors">
+                    <div key={index} className="flex gap-4 sm:gap-6 bg-gray-50 p-4 sm:p-6 rounded-xl hover:bg-gray-100 transition-colors duration-200 will-change-transform">
                       <div className="bg-gray-900 text-white rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center text-sm sm:text-lg font-bold flex-shrink-0">
                         {index + 1}
                       </div>

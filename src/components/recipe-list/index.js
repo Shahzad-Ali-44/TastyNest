@@ -75,10 +75,10 @@ export default function RecipeList({ recipeList }) {
                   <button
                     type="button"
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all min-w-[200px] bg-white cursor-pointer hover:border-gray-400 text-left flex items-center justify-between"
+                    className="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all min-w-[200px] bg-white cursor-pointer hover:border-gray-400 text-left flex items-center"
                   >
                     <span className="text-gray-700">{selectedCuisine || "All Cuisines"}</span>
-                    <div className={`transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : 'rotate-0'}`}>
+                    <div className={`absolute right-3 top-1/2 transform -translate-y-1/2 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : 'rotate-0'}`}>
                       <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
