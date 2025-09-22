@@ -92,14 +92,14 @@ export default function RecipeDetailsItem({ getRecipeDetails }) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 contain-layout">
             <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl border border-gray-200 shadow-sm will-change-transform transform-gpu contain-paint">
               <div className="flex items-center gap-3 mb-6 sm:mb-8">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-100 rounded-xl flex items-center justify-center">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-100 rounded-xl flex items-center justify-center will-change-transform transform-gpu">
                   <span className="text-xl sm:text-2xl">🥕</span>
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Ingredients</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 transform-gpu will-change-transform">Ingredients</h3>
               </div>
               <div className="space-y-3 sm:space-y-4">
                 {getRecipeDetails?.ingredients?.map((item, index) => (
-                  <div key={index} className="flex items-center gap-3 sm:gap-4 bg-gray-50 p-3 sm:p-4 rounded-xl hover:bg-gray-100 transition-colors duration-200 will-change-transform">
+                  <div key={index} className="flex items-center gap-3 sm:gap-4 bg-gray-50 p-3 sm:p-4 rounded-xl hover:bg-gray-100 transition-colors duration-150 will-change-transform transform-gpu contain-paint">
                     <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full flex-shrink-0"></div>
                     <span className="text-gray-700 font-medium text-base sm:text-lg">{item}</span>
                   </div>
@@ -110,14 +110,14 @@ export default function RecipeDetailsItem({ getRecipeDetails }) {
             {getRecipeDetails?.instructions && (
               <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl border border-gray-200 shadow-sm will-change-transform transform-gpu contain-paint">
                 <div className="flex items-center gap-3 mb-6 sm:mb-8">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-xl flex items-center justify-center will-change-transform transform-gpu">
                     <span className="text-xl sm:text-2xl">👨‍🍳</span>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Instructions</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 transform-gpu will-change-transform">Instructions</h3>
                 </div>
                 <div className="space-y-4 sm:space-y-6">
                   {getRecipeDetails.instructions.map((instruction, index) => (
-                    <div key={index} className="flex gap-4 sm:gap-6 bg-gray-50 p-4 sm:p-6 rounded-xl hover:bg-gray-100 transition-colors duration-200 will-change-transform">
+                    <div key={index} className="flex gap-4 sm:gap-6 bg-gray-50 p-4 sm:p-6 rounded-xl hover:bg-gray-100 transition-colors duration-150 will-change-transform transform-gpu contain-paint">
                       <div className="bg-gray-900 text-white rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center text-sm sm:text-lg font-bold flex-shrink-0">
                         {index + 1}
                       </div>
