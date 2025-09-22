@@ -12,28 +12,28 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-gray-900 text-white py-16 contain-layout">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="md:col-span-2">
-            <h3 className="text-3xl font-bold text-white mb-6">
+            <h3 className="text-3xl font-bold text-white mb-6 transform-gpu will-change-transform">
               TastyNest
             </h3>
             <p className="text-gray-300 leading-relaxed max-w-md">
               Professional recipe management platform. Discover, create, and share culinary excellence with our curated collection.
             </p>
           </div>
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+          <div className="contain-paint">
+            <h4 className="text-lg font-semibold text-white mb-4 transform-gpu will-change-transform">Quick Links</h4>
             <div className="space-y-3">
-              <a href="/" className="block text-gray-300 hover:text-white transition-colors">Home</a>
-              <a href="/recipes" className="block text-gray-300 hover:text-white transition-colors">Recipes</a>
-              <a href="/about" className="block text-gray-300 hover:text-white transition-colors">About</a>
-              <a href="/contact" className="block text-gray-300 hover:text-white transition-colors">Contact</a>
+              <a href="/" className="block text-gray-300 hover:text-white transition-colors will-change-transform">Home</a>
+              <a href="/recipes" className="block text-gray-300 hover:text-white transition-colors will-change-transform">Recipes</a>
+              <a href="/about" className="block text-gray-300 hover:text-white transition-colors will-change-transform">About</a>
+              <a href="/contact" className="block text-gray-300 hover:text-white transition-colors will-change-transform">Contact</a>
             </div>
           </div>
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Stats</h4>
+          <div className="contain-paint">
+            <h4 className="text-lg font-semibold text-white mb-4 transform-gpu will-change-transform">Stats</h4>
             <div className="space-y-3">
               <p className="text-gray-300">1000+ Recipes</p>
               <p className="text-gray-300">50+ Cuisines</p>
@@ -42,7 +42,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="border-t border-gray-700 pt-8">
+        <div className="border-t border-gray-700 pt-8 contain-paint">
           <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left space-y-4 md:space-y-0">
             <p className="text-gray-400">
               © {isClient ? currentYear : 2024} <span className="font-semibold text-white">TastyNest</span>. All Rights Reserved.
@@ -53,7 +53,7 @@ export default function Footer() {
                 href="https://shahzadali.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-gray-300 transition-colors font-medium"
+                className="text-white hover:text-gray-300 transition-colors font-medium will-change-transform"
               >
                 Shahzad Ali
               </a>

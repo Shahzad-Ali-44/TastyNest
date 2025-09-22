@@ -7,8 +7,8 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50">
       <Navbar/>
    
-      <main>
-        <section className="py-20 bg-gray-900 text-white">
+      <main className="content-visibility-auto">
+        <section className="py-20 bg-gray-900 text-white contain-layout">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
@@ -36,24 +36,24 @@ export default function Home() {
               <div className="relative">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-4">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 will-change-transform transform-gpu">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 will-change-transform transform-gpu contain-paint">
                       <div className="text-4xl mb-3">🍕</div>
                       <h3 className="text-lg font-bold">Italian</h3>
                       <p className="text-sm text-gray-300">Pasta & Pizza</p>
                     </div>
-                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 will-change-transform transform-gpu">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 will-change-transform transform-gpu contain-paint">
                       <div className="text-4xl mb-3">🍜</div>
                       <h3 className="text-lg font-bold">Asian</h3>
                       <p className="text-sm text-gray-300">Noodles & Rice</p>
                     </div>
                   </div>
                   <div className="space-y-4 mt-8">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 will-change-transform transform-gpu">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 will-change-transform transform-gpu contain-paint">
                       <div className="text-4xl mb-3">🥘</div>
                       <h3 className="text-lg font-bold">Indian</h3>
                       <p className="text-sm text-gray-300">Curries & Spices</p>
                     </div>
-                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 will-change-transform transform-gpu">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 will-change-transform transform-gpu contain-paint">
                       <div className="text-4xl mb-3">🍰</div>
                       <h3 className="text-lg font-bold">Desserts</h3>
                       <p className="text-sm text-gray-300">Sweet Treats</p>
@@ -65,7 +65,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white contain-layout">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 transform-gpu will-change-transform">
@@ -77,7 +77,7 @@ export default function Home() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gray-900 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 will-change-transform transform-gpu">
+              <div className="bg-gray-900 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 will-change-transform transform-gpu contain-paint">
                 <div className="text-5xl mb-4">🍕</div>
                 <h3 className="text-2xl font-bold mb-4">Italian Cuisine</h3>
                 <p className="text-gray-300 mb-6">Classic pasta, pizza, and risotto recipes from the heart of Italy.</p>
@@ -86,7 +86,7 @@ export default function Home() {
                 </div>
               </div>
               
-              <div className="bg-gray-800 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 will-change-transform transform-gpu">
+              <div className="bg-gray-800 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 will-change-transform transform-gpu contain-paint">
                 <div className="text-5xl mb-4">🍜</div>
                 <h3 className="text-2xl font-bold mb-4">Asian Fusion</h3>
                 <p className="text-gray-300 mb-6">Fresh noodles, rice dishes, and aromatic Asian flavors.</p>
@@ -95,7 +95,7 @@ export default function Home() {
                 </div>
               </div>
               
-              <div className="bg-gray-900 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 will-change-transform transform-gpu">
+              <div className="bg-gray-900 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 will-change-transform transform-gpu contain-paint">
                 <div className="text-5xl mb-4">🥗</div>
                 <h3 className="text-2xl font-bold mb-4">Healthy & Fresh</h3>
                 <p className="text-gray-300 mb-6">Nutritious salads, smoothies, and wholesome meals.</p>
@@ -104,7 +104,7 @@ export default function Home() {
                 </div>
               </div>
               
-              <div className="bg-gray-800 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 will-change-transform transform-gpu">
+              <div className="bg-gray-800 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 will-change-transform transform-gpu contain-paint">
                 <div className="text-5xl mb-4">🍰</div>
                 <h3 className="text-2xl font-bold mb-4">Desserts & Sweets</h3>
                 <p className="text-gray-300 mb-6">Indulgent cakes, cookies, and sweet treats for every occasion.</p>
@@ -113,7 +113,7 @@ export default function Home() {
                 </div>
               </div>
               
-              <div className="bg-gray-900 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 will-change-transform transform-gpu">
+              <div className="bg-gray-900 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 will-change-transform transform-gpu contain-paint">
                 <div className="text-5xl mb-4">🥘</div>
                 <h3 className="text-2xl font-bold mb-4">Indian Spices</h3>
                 <p className="text-gray-300 mb-6">Aromatic curries, biryanis, and traditional Indian dishes.</p>
@@ -122,7 +122,7 @@ export default function Home() {
                 </div>
               </div>
               
-              <div className="bg-gray-800 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 will-change-transform transform-gpu">
+              <div className="bg-gray-800 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 will-change-transform transform-gpu contain-paint">
                 <div className="text-5xl mb-4">🍳</div>
                 <h3 className="text-2xl font-bold mb-4">Quick & Easy</h3>
                 <p className="text-gray-300 mb-6">30-minute meals and simple recipes for busy weeknights.</p>
@@ -134,7 +134,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50 contain-layout">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 transform-gpu will-change-transform">
@@ -146,7 +146,7 @@ export default function Home() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center will-change-transform transform-gpu">
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center will-change-transform transform-gpu contain-paint">
                 <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-4xl">👨‍🍳</span>
                 </div>
@@ -156,7 +156,7 @@ export default function Home() {
                 <div className="text-sm text-gray-500">Expert Recipes</div>
               </div>
               
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center will-change-transform transform-gpu">
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center will-change-transform transform-gpu contain-paint">
                 <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-4xl">⭐</span>
                 </div>
@@ -166,7 +166,7 @@ export default function Home() {
                 <div className="text-sm text-gray-500">Average Rating</div>
               </div>
               
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center will-change-transform transform-gpu">
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center will-change-transform transform-gpu contain-paint">
                 <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-4xl">🌍</span>
                 </div>
@@ -179,7 +179,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-20 bg-gray-900 text-white">
+        <section className="py-20 bg-gray-900 text-white contain-layout">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 transform-gpu will-change-transform">
               Ready to Cook Something Amazing?
@@ -202,17 +202,17 @@ export default function Home() {
             </div>
             
             <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 will-change-transform transform-gpu">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 will-change-transform transform-gpu contain-paint">
                 <div className="text-4xl mb-4">🍽️</div>
                 <h3 className="text-xl font-bold mb-2">1000+ Recipes</h3>
                 <p className="text-gray-300">From appetizers to desserts</p>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 will-change-transform transform-gpu">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 will-change-transform transform-gpu contain-paint">
                 <div className="text-4xl mb-4">⏱️</div>
                 <h3 className="text-xl font-bold mb-2">Quick & Easy</h3>
                 <p className="text-gray-300">30-minute meals included</p>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 will-change-transform transform-gpu">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 will-change-transform transform-gpu contain-paint">
                 <div className="text-4xl mb-4">🌍</div>
                 <h3 className="text-xl font-bold mb-2">Global Cuisines</h3>
                 <p className="text-gray-300">Taste the world</p>
