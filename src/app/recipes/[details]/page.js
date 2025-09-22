@@ -1,15 +1,21 @@
 import RecipeDetailsItem from "@/components/recipe-details";
+
 async function fetchRecipeDetails(currentRecipeId) {
   try {
     const apiResponse = await fetch(
       `https://dummyjson.com/recipes/${currentRecipeId}`, {
         cache: "force-cache", 
       });
+    
+    if (!apiResponse.ok) {
+      throw new Error(`HTTP error! status: ${apiResponse.status}`);
+    }
+    
     const data = await apiResponse.json();
     return data;
   } catch (error) {
-    console.log(error);
-    
+    console.error('Error fetching recipe details:', error);
+    return null;
   }
 }
 

@@ -1,0 +1,199 @@
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
+import Link from "next/link";
+
+export default function About() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Navbar />
+      
+      <main>
+        <section className="py-20 bg-gray-900 text-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                About
+                <span className="block text-gray-300">TastyNest</span>
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Professional recipe management platform dedicated to culinary excellence. 
+                Discover, create, and share amazing recipes with our global community of food lovers.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
+                <div className="text-5xl mb-4">🍳</div>
+                <h3 className="text-2xl font-bold mb-4">1000+ Recipes</h3>
+                <p className="text-gray-300">Curated collection from professional chefs</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
+                <div className="text-5xl mb-4">🌍</div>
+                <h3 className="text-2xl font-bold mb-4">50+ Cuisines</h3>
+                <p className="text-gray-300">Global flavors from every corner of the world</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
+                <div className="text-5xl mb-4">⭐</div>
+                <h3 className="text-2xl font-bold mb-4">4.8/5 Rating</h3>
+                <p className="text-gray-300">Highly rated by our community</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Our Story
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Born from a passion for great food and the desire to make professional-quality 
+                recipes accessible to everyone, everywhere.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+              <div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-6">Mission</h3>
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                  TastyNest is dedicated to providing a professional platform for recipe discovery, 
+                  creation, and sharing. We believe that great cooking starts with great recipes, 
+                  and our platform makes it easy to find, organize, and share culinary excellence.
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Whether you're a home cook looking for inspiration or a professional chef 
+                  managing your recipe collection, TastyNest provides the tools and resources 
+                  you need to succeed in the kitchen.
+                </p>
+              </div>
+              <div className="bg-gray-100 rounded-2xl p-8 text-center">
+                <div className="text-6xl mb-4">👨‍🍳</div>
+                <h4 className="text-2xl font-bold text-gray-900 mb-4">Professional Quality</h4>
+                <p className="text-gray-600">
+                  Every recipe is carefully tested and curated by our team of culinary experts 
+                  to ensure professional standards.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Why Choose TastyNest?
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We're committed to providing the best recipe experience with professional 
+                quality, global diversity, and user-friendly features.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center hover:shadow-xl transition-all duration-300">
+                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-4xl">🔍</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Smart Search</h3>
+                <p className="text-gray-600">Advanced filtering and search capabilities to find exactly what you need.</p>
+              </div>
+              
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center hover:shadow-xl transition-all duration-300">
+                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-4xl">📱</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Mobile First</h3>
+                <p className="text-gray-600">Optimized for mobile devices with responsive design and fast loading.</p>
+              </div>
+              
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center hover:shadow-xl transition-all duration-300">
+                <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-4xl">🌐</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Global Community</h3>
+                <p className="text-gray-600">Connect with food enthusiasts from around the world.</p>
+              </div>
+              
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center hover:shadow-xl transition-all duration-300">
+                <div className="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-4xl">⚡</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Fast & Light</h3>
+                <p className="text-gray-600">Lightweight design optimized for fast loading on all devices.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-gray-900 text-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Our Values
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything we do is guided by our core values of quality, accessibility, 
+                and community.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                <div className="text-4xl mb-4">🎯</div>
+                <h3 className="text-2xl font-bold mb-4">Quality First</h3>
+                <p className="text-gray-300">
+                  We maintain the highest standards in recipe curation and platform performance.
+                </p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                <div className="text-4xl mb-4">🤝</div>
+                <h3 className="text-2xl font-bold mb-4">Community Driven</h3>
+                <p className="text-gray-300">
+                  Our platform is built by and for the global community of food lovers.
+                </p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                <div className="text-4xl mb-4">🚀</div>
+                <h3 className="text-2xl font-bold mb-4">Innovation</h3>
+                <p className="text-gray-300">
+                  We continuously improve and innovate to provide the best user experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Ready to Start Cooking?
+            </h2>
+            <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+              Join our community of food lovers and discover your next favorite recipe today!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link
+                href="/recipes"
+                className="px-10 py-5 bg-gray-900 text-white rounded-xl font-bold text-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 shadow-xl"
+              >
+                Browse Recipes
+              </Link>
+              <Link
+                href="/contact"
+                className="px-10 py-5 border-2 border-gray-900 text-gray-900 rounded-xl font-bold text-lg hover:bg-gray-900 hover:text-white transition-all duration-300 transform hover:scale-105"
+              >
+                Get in Touch
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}

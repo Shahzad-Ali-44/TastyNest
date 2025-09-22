@@ -1,7 +1,8 @@
-import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 import { Suspense } from "react";
 import Loading from "./loading";
+import ClientAnalytics from "./client-analytics";
+import ClientWrapper from "./client-wrapper";
 
 
 export const metadata = {
@@ -12,18 +13,22 @@ export const metadata = {
   robots: "index, follow",
   googlebot: "index, follow",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <Suspense fallback={<Loading />}>
-          {children}
-          <Analytics />
-        </Suspense>
+      <body suppressHydrationWarning={true}>
+        <ClientWrapper>
+          <Suspense fallback={<Loading />}>
+            {children}
+            <ClientAnalytics />
+          </Suspense>
+        </ClientWrapper>
       </body>
     </html>
   );
