@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import Loading from "./loading";
 import ClientAnalytics from "./client-analytics";
 import ClientWrapper from "./client-wrapper";
+import ChatBot from "../components/chatbot";
 
 
 export const metadata = {
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
           <Suspense fallback={<Loading />}>
             {children}
             <ClientAnalytics />
+            <ChatBot />
           </Suspense>
         </ClientWrapper>
       </body>
