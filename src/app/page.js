@@ -1,7 +1,6 @@
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Home() {
   return (

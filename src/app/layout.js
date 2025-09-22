@@ -13,8 +13,8 @@ export const metadata = {
   robots: "index, follow",
   googlebot: "index, follow",
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
     apple: "/logo.png",
   },
 };
