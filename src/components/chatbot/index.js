@@ -74,12 +74,9 @@ const ChatBot = () => {
   };
 
   const quickQuestions = [
-    "How to cook perfect pasta?",
+    "How to cook pasta?",
     "Rice cooking tips",
     "Chicken cooking methods",
-    "Egg cooking techniques",
-    "Knife skills basics",
-    "Meal prep ideas"
   ];
 
   return (
@@ -93,7 +90,7 @@ const ChatBot = () => {
       </button>
 
       {isOpen && (
-        <div className="fixed bottom-24 right-2 sm:right-6 z-[9999] w-[calc(100vw-1rem)] sm:w-96 md:w-[28rem] lg:w-[32rem] h-[calc(100vh-8rem)] sm:h-[28rem] md:h-[32rem] lg:h-[36rem] bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl border border-gray-200 flex flex-col">
+        <div className="fixed bottom-24 right-2 sm:right-6 z-[9999] w-[calc(100vw-2rem)] sm:w-96 md:w-[28rem] lg:w-[32rem] h-[calc(100vh-10rem)] sm:h-[28rem] md:h-[32rem] lg:h-[36rem] bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl border border-gray-200 flex flex-col">
           <div className="bg-blue-600 text-white p-4 rounded-t-xl flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <ChefHat size={20} />
