@@ -29,13 +29,16 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-6 h-24 overflow-hidden">
                 <div className="flex justify-between items-center h-full">
                     <Link href="/" className="flex items-center hover:opacity-80 transition-all duration-300">
-                        <Image
-                            src="/logo.png"
-                            alt="TastyNest Logo"
-                            width={200}
-                            height={60}
-                            className="h-45 w-auto"
-                        />
+                        <div className="h-32 sm:h-45 w-auto flex items-center">
+                            <Image
+                                src="/logo.png"
+                                alt="TastyNest Logo"
+                                width={200}
+                                height={60}
+                                className="h-36 sm:h-48 w-auto object-contain"
+                                priority
+                            />
+                        </div>
                     </Link>
                     
                     <div className="hidden md:flex space-x-10">

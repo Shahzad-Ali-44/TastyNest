@@ -93,7 +93,7 @@ const ChatBot = () => {
       </button>
 
       {isOpen && (
-        <div className="fixed bottom-24 right-6 z-[9999] w-80 sm:w-96 md:w-[28rem] lg:w-[32rem] h-96 sm:h-[28rem] md:h-[32rem] lg:h-[36rem] bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl border border-gray-200 flex flex-col">
+        <div className="fixed bottom-24 right-2 sm:right-6 z-[9999] w-[calc(100vw-1rem)] sm:w-96 md:w-[28rem] lg:w-[32rem] h-[calc(100vh-8rem)] sm:h-[28rem] md:h-[32rem] lg:h-[36rem] bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl border border-gray-200 flex flex-col">
           <div className="bg-blue-600 text-white p-4 rounded-t-xl flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <ChefHat size={20} />
@@ -114,7 +114,7 @@ const ChatBot = () => {
                 className={`flex ${message.isBot ? 'justify-start' : 'justify-end'}`}
               >
                 <div
-                  className={`max-w-sm px-3 py-2 rounded-xl ${
+                  className={`max-w-xs sm:max-w-sm px-3 py-2 rounded-xl ${
                     message.isBot
                       ? 'bg-blue-50 text-gray-800'
                       : 'bg-blue-600 text-white'
