@@ -38,6 +38,13 @@ export default function Navbar() {
                                 className="h-36 sm:h-48 w-auto object-contain"
                                 priority
                                 sizes="(max-width: 640px) 120px, 180px"
+                                style={{
+                                    width: 'auto !important',
+                                    height: 'auto !important',
+                                    maxWidth: '180px',
+                                    maxHeight: '192px'
+                                }}
+                                unoptimized={false}
                             />
                         </div>
                     </Link>
