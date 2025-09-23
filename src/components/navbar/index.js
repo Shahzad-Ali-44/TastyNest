@@ -29,7 +29,7 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-6 h-20 sm:h-24">
                 <div className="flex justify-between items-center h-full">
                     <Link href="/" className="flex items-center hover:opacity-80 transition-all duration-300">
-                        <div className="h-16 sm:h-20 flex items-center">
+                        <div className="h-16 sm:h-20 flex items-center overflow-hidden">
                             <Image
                                 src="/logo.png"
                                 alt="TastyNest Logo"
