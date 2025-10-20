@@ -179,45 +179,29 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-20 bg-gray-900 text-white contain-layout">
+        <section className="py-20 bg-white text-gray-900 contain-layout">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 transform-gpu will-change-transform">
               Ready to Cook Something Amazing?
             </h2>
-            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
               Join our community of food lovers and discover your next favorite recipe today!
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
                 href="/recipes"
-                className="px-10 py-5 bg-white text-gray-900 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors duration-200 transform hover:scale-105 shadow-lg will-change-transform"
+                className="px-10 py-5 bg-gray-900 text-white rounded-xl font-bold text-lg hover:bg-gray-800 transition-colors duration-200 transform hover:scale-105 shadow-lg will-change-transform"
               >Browse All Recipes
               </Link>
               <Link
                 href="/about"
-                className="px-10 py-5 border-2 border-white text-white rounded-xl font-bold text-lg hover:bg-white hover:text-gray-900 transition-colors duration-200 transform hover:scale-105 will-change-transform"
+                className="px-10 py-5 border-2 border-gray-900 text-gray-900 rounded-xl font-bold text-lg hover:bg-gray-900 hover:text-white transition-colors duration-200 transform hover:scale-105 will-change-transform"
               >
                 Learn About Us
               </Link>
             </div>
             
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              <div className="bg-white/20 rounded-2xl p-6 border border-white/30 will-change-transform transform-gpu contain-paint">
-                <div className="text-4xl mb-4">🍽️</div>
-                <h3 className="text-xl font-bold mb-2">1000+ Recipes</h3>
-                <p className="text-gray-300">From appetizers to desserts</p>
-              </div>
-              <div className="bg-white/20 rounded-2xl p-6 border border-white/30 will-change-transform transform-gpu contain-paint">
-                <div className="text-4xl mb-4">⏱️</div>
-                <h3 className="text-xl font-bold mb-2">Quick & Easy</h3>
-                <p className="text-gray-300">30-minute meals included</p>
-              </div>
-              <div className="bg-white/20 rounded-2xl p-6 border border-white/30 will-change-transform transform-gpu contain-paint">
-                <div className="text-4xl mb-4">🌍</div>
-                <h3 className="text-xl font-bold mb-2">Global Cuisines</h3>
-                <p className="text-gray-300">Taste the world</p>
-              </div>
-            </div>
+          
           </div>
         </section>
       </main>

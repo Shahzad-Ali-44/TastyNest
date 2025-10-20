@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const [currentYear, setCurrentYear] = useState(null);
@@ -16,9 +18,26 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="md:col-span-2">
-            <h3 className="text-3xl font-bold text-white mb-6 transform-gpu will-change-transform">
-              TastyNest
-            </h3>
+            <Link href="/" className="flex items-center hover:opacity-80 transition-all duration-300 mb-6">
+              <div className="h-20 sm:h-24 flex items-center overflow-hidden">
+                <Image
+                  src="/logo.png"
+                  alt="TastyNest Logo"
+                  width={240}
+                  height={80}
+                  className="h-48 sm:h-56 w-auto object-contain filter brightness-0 invert"
+                  priority
+                  sizes="(max-width: 640px) 160px, 240px"
+                  style={{
+                    width: 'auto !important',
+                    height: 'auto !important',
+                    maxWidth: '240px',
+                    maxHeight: '224px'
+                  }}
+                  unoptimized={false}
+                />
+              </div>
+            </Link>
             <p className="text-gray-300 leading-relaxed max-w-md">
               Professional recipe management platform. Discover, create, and share culinary excellence with our curated collection.
             </p>
