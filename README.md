@@ -20,7 +20,7 @@ TastyNest is a modern and responsive recipe web application built using **Next.j
 - **Icons**: Lucide React
 
 
-## 🔧 Getting Started
+##  Getting Started
 
 ### 1. Clone the repository
 
