@@ -48,7 +48,7 @@ export default function About() {
                 Our Story
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Born from a passion for great food and the desire to make professional-quality 
+                Born from a passion for great food and the desire to make professional quality 
                 recipes accessible to everyone, everywhere.
               </p>
             </div>
@@ -68,11 +68,10 @@ export default function About() {
                 </p>
               </div>
               <div className="bg-gray-100 rounded-2xl p-8 text-center will-change-transform transform-gpu contain-paint">
-                <div className="text-6xl mb-4">👨‍🍳</div>
-                <h4 className="text-2xl font-bold text-gray-900 mb-4">Professional Quality</h4>
+                <div className="text-6xl mb-4">🥗</div>
+                <h4 className="text-2xl font-bold text-gray-900 mb-4">Made with care</h4>
                 <p className="text-gray-600">
-                  Every recipe is carefully tested and curated by our team of culinary experts 
-                  to ensure professional standards.
+                  Every recipe is thoughtfully reviewed so it’s easy to follow and a joy to cook.
                 </p>
               </div>
             </div>
@@ -91,37 +90,36 @@ export default function About() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center hover:shadow-lg transition-shadow duration-200 will-change-transform transform-gpu contain-paint">
-                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-4xl">🔍</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Smart Search</h3>
-                <p className="text-gray-600">Advanced filtering and search capabilities to find exactly what you need.</p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Cooking made simple, joyful, and real</h3>
+                <ul className="space-y-5">
+                  <li className="flex items-start gap-4">
+                    <span className="w-10 h-10 bg-green-100 text-green-700 rounded-full flex items-center justify-center text-xl">✔</span>
+                    <div>
+                      <p className="text-lg font-semibold text-gray-900">Easy-to-follow recipes</p>
+                      <p className="text-gray-600">Clear steps and ingredients you actually have at home.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="w-10 h-10 bg-yellow-100 text-yellow-700 rounded-full flex items-center justify-center text-xl">⏱</span>
+                    <div>
+                      <p className="text-lg font-semibold text-gray-900">Ideas for any day</p>
+                      <p className="text-gray-600">Quick weeknight meals or slow Sunday favorites, your choice.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="w-10 h-10 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center text-xl">🌍</span>
+                    <div>
+                      <p className="text-lg font-semibold text-gray-900">Tastes from everywhere</p>
+                      <p className="text-gray-600">Discover comforting classics and new flavors to love.</p>
+                    </div>
+                  </li>
+                </ul>
               </div>
-              
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center hover:shadow-lg transition-shadow duration-200 will-change-transform transform-gpu contain-paint">
-                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-4xl">📱</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Mobile First</h3>
-                <p className="text-gray-600">Optimized for mobile devices with responsive design and fast loading.</p>
-              </div>
-              
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center hover:shadow-lg transition-shadow duration-200 will-change-transform transform-gpu contain-paint">
-                <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-4xl">🌐</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Global Community</h3>
-                <p className="text-gray-600">Connect with food enthusiasts from around the world.</p>
-              </div>
-              
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center hover:shadow-lg transition-shadow duration-200 will-change-transform transform-gpu contain-paint">
-                <div className="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-4xl">⚡</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Fast & Light</h3>
-                <p className="text-gray-600">Lightweight design optimized for fast loading on all devices.</p>
+              <div className="bg-white rounded-2xl border border-gray-200 p-10 text-center shadow-sm will-change-transform transform-gpu contain-paint">
+                <div className="mx-auto w-32 h-32 rounded-full bg-gray-100 flex items-center justify-center text-6xl mb-6">👩‍🍳</div>
+                <p className="text-gray-700 text-lg max-w-md mx-auto">TastyNest is your friendly kitchen companion here to help you cook with confidence and have fun doing it.</p>
               </div>
             </div>
           </div>
@@ -141,7 +139,7 @@ export default function About() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white/20 rounded-2xl p-8 border border-white/30 will-change-transform transform-gpu contain-paint">
-                <div className="text-4xl mb-4">🎯</div>
+                <div className="text-4xl mb-4">🍽️</div>
                 <h3 className="text-2xl font-bold mb-4">Quality First</h3>
                 <p className="text-gray-300">
                   We maintain the highest standards in recipe curation and platform performance.
@@ -149,7 +147,7 @@ export default function About() {
               </div>
               
               <div className="bg-white/20 rounded-2xl p-8 border border-white/30 will-change-transform transform-gpu contain-paint">
-                <div className="text-4xl mb-4">🤝</div>
+                <div className="text-4xl mb-4">🌍</div>
                 <h3 className="text-2xl font-bold mb-4">Community Driven</h3>
                 <p className="text-gray-300">
                   Our platform is built by and for the global community of food lovers.
@@ -157,7 +155,7 @@ export default function About() {
               </div>
               
               <div className="bg-white/20 rounded-2xl p-8 border border-white/30 will-change-transform transform-gpu contain-paint">
-                <div className="text-4xl mb-4">🚀</div>
+                <div className="text-4xl mb-4">✨</div>
                 <h3 className="text-2xl font-bold mb-4">Innovation</h3>
                 <p className="text-gray-300">
                   We continuously improve and innovate to provide the best user experience.

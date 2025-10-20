@@ -62,7 +62,6 @@ export default function Contact() {
       if (result.success) {
         setSubmitStatus("success");
         setFormData({ name: "", email: "", subject: "", message: "" });
-        // Scroll to success message after a short delay to ensure it's rendered
         setTimeout(() => {
           successMessageRef.current?.scrollIntoView({ 
             behavior: 'smooth', 
