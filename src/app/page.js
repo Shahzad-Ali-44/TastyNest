@@ -50,7 +50,7 @@ export default function Home() {
                   <div className="space-y-4 mt-8">
                     <div className="bg-white/20 rounded-2xl p-6 border border-white/30 will-change-transform transform-gpu contain-paint">
                       <div className="text-4xl mb-3">🥘</div>
-                      <h3 className="text-lg font-bold">Indian</h3>
+                      <h3 className="text-lg font-bold">Pakistani</h3>
                       <p className="text-sm text-gray-300">Curries & Spices</p>
                     </div>
                     <div className="bg-white/20 rounded-2xl p-6 border border-white/30 will-change-transform transform-gpu contain-paint">
@@ -115,8 +115,8 @@ export default function Home() {
               
               <div className="bg-gray-900 rounded-2xl p-8 text-white hover:shadow-lg transition-transform duration-200 transform hover:-translate-y-1 will-change-transform transform-gpu contain-paint">
                 <div className="text-5xl mb-4">🥘</div>
-                <h3 className="text-2xl font-bold mb-4">Indian Spices</h3>
-                <p className="text-gray-300 mb-6">Aromatic curries, biryanis, and traditional Indian dishes.</p>
+                <h3 className="text-2xl font-bold mb-4">Pakistani Spices</h3>
+                <p className="text-gray-300 mb-6">Aromatic curries, biryanis, and traditional Pakistani dishes.</p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-semibold">80+ Recipes</span>
                 </div>
