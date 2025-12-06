@@ -250,11 +250,9 @@ export default function Contact() {
                         <span className="text-2xl">📧</span>
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
-                        <p className="text-gray-600 mb-2">Send us an email anytime</p>
-                        <a href="mailto:contact@tastynest.com" className="text-gray-900 font-semibold hover:text-gray-700 transition-colors">
-                          contact@tastynest.com
-                        </a>
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">Contact Form</h3>
+                        <p className="text-gray-600 mb-2">Use the contact form to reach us</p>
+                        <span className="text-gray-900 font-semibold">Fill out the form to send us a message</span>
                       </div>
                     </div>
                   </div>
@@ -265,8 +263,8 @@ export default function Contact() {
                         <span className="text-2xl">💬</span>
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">Live Chat</h3>
-                        <p className="text-gray-600 mb-2">Chat with our support team</p>
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">Cooking Assistant</h3>
+                        <p className="text-gray-600 mb-2">Chat with our AI Chat Bot</p>
                         <span className="text-gray-900 font-semibold">Available 24/7</span>
                       </div>
                     </div>
