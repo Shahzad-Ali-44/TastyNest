@@ -62,10 +62,6 @@ export default function Navbar() {
                             About
                             <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gray-900 group-hover:w-8 transition-all duration-300 rounded-full"></span>
                         </Link>
-                        <Link href="/contact" className="text-gray-700 hover:text-gray-900 font-semibold text-lg py-2 px-4 rounded-xl hover:bg-gray-100 transition-all duration-300 relative group">
-                            Contact
-                            <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gray-900 group-hover:w-8 transition-all duration-300 rounded-full"></span>
-                        </Link>
                     </div>
 
                     <button
@@ -106,13 +102,6 @@ export default function Navbar() {
                             onClick={() => setIsMenuOpen(false)}
                         >
                             About
-                        </Link>
-                        <Link 
-                            href="/contact" 
-                            className="block text-gray-700 hover:text-gray-900 font-semibold text-lg py-3 px-4 rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            Contact
                         </Link>
                     </div>
                 </div>

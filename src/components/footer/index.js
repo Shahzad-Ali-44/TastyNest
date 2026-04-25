@@ -48,7 +48,6 @@ export default function Footer() {
               <a href="/" className="block text-gray-300 hover:text-white transition-colors will-change-transform">Home</a>
               <a href="/recipes" className="block text-gray-300 hover:text-white transition-colors will-change-transform">Recipes</a>
               <a href="/about" className="block text-gray-300 hover:text-white transition-colors will-change-transform">About</a>
-              <a href="/contact" className="block text-gray-300 hover:text-white transition-colors will-change-transform">Contact</a>
             </div>
           </div>
           <div className="contain-paint">

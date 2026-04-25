@@ -180,12 +180,6 @@ export default function About() {
               >
                 Browse Recipes
               </Link>
-              <Link
-                href="/contact"
-                className="px-10 py-5 border-2 border-gray-900 text-gray-900 rounded-xl font-bold text-lg hover:bg-gray-900 hover:text-white transition-colors duration-200 transform hover:scale-105 will-change-transform"
-              >
-                Get in Touch
-              </Link>
             </div>
           </div>
         </section>

@@ -41,12 +41,10 @@ Create a `.env.local` file in the root directory and add your API keys:
 
 ```bash
 GEMINI_API_KEY=your_gemini_api_key_here
-WEB3FORMS_ACCESS_KEY=your_web3forms_access_key_here
 ```
 
 **Get your API keys from**:
 - **Gemini AI**: [Google AI Studio](https://makersuite.google.com/app/apikey)
-- **Web3Forms**: [Web3Forms](https://web3forms.com/) (for contact form functionality)
 
 ### 4. Run the development server
 

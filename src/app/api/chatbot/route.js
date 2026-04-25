@@ -53,9 +53,6 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const generateCookingResponse = async (userMessage, retryCount = 0) => {
   try {
     const apiKey = process.env.GEMINI_API_KEY;
-    if (!apiKey) {
-      return { ok: false, error: "Missing GEMINI_API_KEY." };
-    }
 
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash-lite' });
@@ -72,7 +69,7 @@ const generateCookingResponse = async (userMessage, retryCount = 0) => {
     }
 
     if (message.toLowerCase().includes('api key')) {
-      return { ok: false, error: "Sorry, there's a configuration issue. Please contact support if this continues." };
+      return { ok: false, error: "Sorry, there's an issue. Please contact support if this continues." };
     }
 
     if (['quota', 'limit', '429'].some((s) => message.toLowerCase().includes(s))) {
