@@ -40,8 +40,8 @@ npm install
 Create a `.env.local` file in the root directory and add your API keys:
 
 ```bash
-NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key_here
-NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your_web3forms_access_key_here
+GEMINI_API_KEY=your_gemini_api_key_here
+WEB3FORMS_ACCESS_KEY=your_web3forms_access_key_here
 ```
 
 **Get your API keys from**:

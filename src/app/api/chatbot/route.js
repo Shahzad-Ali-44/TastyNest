@@ -1,12 +1,6 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY);
-
-export const generateCookingResponse = async (userMessage, retryCount = 0) => {
-  try {
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
-    
-    const prompt = `You are a professional cooking assistant for TastyNest recipe app. 
+const promptFor = (userMessage) => `You are a professional cooking assistant for TastyNest recipe app. 
 
 FIRST, use your reasoning abilities to analyze the user's question:
 - Is this question related to cooking, recipes, food, ingredients, cooking techniques, meal planning, or kitchen-related topics?
@@ -51,33 +45,65 @@ User question: ${userMessage}
 
 Provide your response:`;
 
-    const result = await model.generateContent(prompt);
+const shouldRetry = (message = '') =>
+  ['timeout', 'network', 'fetch', '500', '503'].some((s) => message.toLowerCase().includes(s));
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+const generateCookingResponse = async (userMessage, retryCount = 0) => {
+  try {
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) {
+      return { ok: false, error: "Missing GEMINI_API_KEY." };
+    }
+
+    const genAI = new GoogleGenerativeAI(apiKey);
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash-lite' });
+    const result = await model.generateContent(promptFor(userMessage));
     const response = await result.response;
-    let text = response.text();
-    return text;
+    const text = response.text();
+    return { ok: true, text };
   } catch (error) {
-    console.error('Gemini API Error:', error);
-    
-    if (retryCount < 2 && (
-      error.message?.includes('timeout') || 
-      error.message?.includes('network') || 
-      error.message?.includes('fetch') ||
-      error.message?.includes('500') ||
-      error.message?.includes('503')
-    )) {
-      console.log(`Retrying... attempt ${retryCount + 1}`);
-      await new Promise(resolve => setTimeout(resolve, 1000 * (retryCount + 1)));
+    const message = error?.message || String(error);
+
+    if (retryCount < 2 && shouldRetry(message)) {
+      await sleep(1000 * (retryCount + 1));
       return generateCookingResponse(userMessage, retryCount + 1);
     }
-    if (error.message?.includes('API key')) {
-      return "Sorry, there's a configuration issue. Please contact support if this continues.";
-    } else if (error.message?.includes('quota') || error.message?.includes('limit') || error.message?.includes('429')) {
-      return "I'm getting a lot of requests right now! Please wait a few minutes and try again. In the meantime, feel free to browse our recipes!";
-    } else if (error.message?.includes('network') || error.message?.includes('fetch')) {
-      return "I'm having trouble connecting. Please check your internet connection and try again.";
-    } else {
-      return "Please try again in a moment.";
+
+    if (message.toLowerCase().includes('api key')) {
+      return { ok: false, error: "Sorry, there's a configuration issue. Please contact support if this continues." };
     }
+
+    if (['quota', 'limit', '429'].some((s) => message.toLowerCase().includes(s))) {
+      return {
+        ok: false,
+        error:
+          "I'm getting a lot of requests right now! Please wait a few minutes and try again. In the meantime, feel free to browse our recipes!",
+      };
+    }
+
+    if (['network', 'fetch'].some((s) => message.toLowerCase().includes(s))) {
+      return { ok: false, error: "I'm having trouble connecting. Please check your internet connection and try again." };
+    }
+
+    return { ok: false, error: 'Please try again in a moment.' };
   }
 };
+
+export async function POST(request) {
+  try {
+    const body = await request.json();
+    const message = body?.message;
+
+    if (typeof message !== 'string' || !message.trim()) {
+      return Response.json({ ok: false, error: 'Message is required.' }, { status: 400 });
+    }
+
+    const result = await generateCookingResponse(message);
+    return Response.json(result, { status: result.ok ? 200 : 500 });
+  } catch {
+    return Response.json({ ok: false, error: 'Invalid request.' }, { status: 400 });
+  }
+}
 

@@ -43,23 +43,20 @@ export default function Contact() {
     setSubmitStatus("");
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
           name: formData.name,
           email: formData.email,
-          subject: `TastyNest - ${formData.subject}`,
-          message: `${formData.message}\n\n---\nThis email was sent via TastyNest contact form.`,
+          subject: formData.subject,
+          message: formData.message,
         }),
       });
 
-      const result = await response.json();
-      
-      if (result.success) {
+      const result = await response.json().catch(() => null);
+
+      if (response.ok && result?.ok) {
         setSubmitStatus("success");
         setFormData({ name: "", email: "", subject: "", message: "" });
         setTimeout(() => {

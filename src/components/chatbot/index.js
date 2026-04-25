@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, Send, ChefHat, Clock, Users, Star } from 'lucide-react';
-import { generateCookingResponse } from '../../lib/gemini';
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +41,14 @@ const ChatBot = () => {
     setIsTyping(true);
 
     try {
-      const botResponse = await generateCookingResponse(inputValue);
+      const res = await fetch('/api/chatbot', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: inputValue }),
+      });
+
+      const data = await res.json().catch(() => null);
+      const botResponse = data?.ok ? data.text : data?.error || "I'm sorry, I'm having trouble connecting right now. Please try again!";
       
       const botMessage = {
         id: Date.now() + Math.random() + 1,
